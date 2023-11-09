@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = 3000 || process.env.PORT;
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
